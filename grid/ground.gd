@@ -3,6 +3,7 @@ class_name Ground extends Node2D
 
 @export_range(0, 20) var width: int = 1
 @export_range(0, 20) var height: int = 1
+@export var tile_prefab: Resource
 
 @onready var tiles: Dictionary = {}
 
@@ -12,7 +13,7 @@ const R_TILE = preload("res://grid/tile.tscn")
 func _ready():
 	for longitude in range(0, width):
 		for latitude in range(0, height):
-			var tile = R_TILE.instantiate()
+			var tile = tile_prefab.instantiate()
 			tile.latitude = latitude
 			tile.longitude = longitude
 			tile.elevation = 0

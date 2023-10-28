@@ -1,9 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2ygesbj8k11u"]
+[gd_scene load_steps=4 format=3 uid="uid://c2ygesbj8k11u"]
 
 [ext_resource type="PackedScene" uid="uid://canaeesa8apf4" path="res://grid/ground.tscn" id="1_kagpb"]
+[ext_resource type="PackedScene" uid="uid://ibf7k461ntik" path="res://grid/tile.tscn" id="2_btldw"]
+[ext_resource type="PackedScene" uid="uid://dkq3jtv06n6ar" path="res://grid/blue_tile.tscn" id="3_1bogi"]
 
 [node name="Level" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Ground" parent="." instance=ExtResource("1_kagpb")]
+tile_prefab = ExtResource("2_btldw")
+
+[node name="Floor1" parent="." instance=ExtResource("1_kagpb")]
+position = Vector2(0, -64)
+tile_prefab = ExtResource("3_1bogi")
+
+[node name="Floor2" parent="." instance=ExtResource("1_kagpb")]
+position = Vector2(0, -128)
+tile_prefab = ExtResource("2_btldw")
+
+[node name="Floor3" parent="." instance=ExtResource("1_kagpb")]
+position = Vector2(0, -192)
+tile_prefab = ExtResource("3_1bogi")
+
+[node name="Floor5" parent="." instance=ExtResource("1_kagpb")]
+position = Vector2(0, -256)
+tile_prefab = ExtResource("2_btldw")
