@@ -13,7 +13,6 @@ var _elevation: int
 
 func _ready():
 	_update_position()
-	print(">%s ready" % self)
 
 func _init(init_latitude: int = 0, init_longitude: int = 0, init_elevation: int = 0) -> void:
 	_latitude = init_latitude
@@ -49,4 +48,3 @@ func _update_position() -> void:
 	var pos_vector3 = coord.to_vector3()
 	position = Vector2(pos_vector3.x, pos_vector3.y)
 	z_index = pos_vector3.z
-	print("%s is at position %s"  % [self, position])

@@ -9,21 +9,40 @@
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -259)
 
-[node name="Ground" parent="." instance=ExtResource("1_kagpb")]
+[node name="Grid" type="Node2D" parent="."]
+
+[node name="Ground" parent="Grid" instance=ExtResource("1_kagpb")]
 tile_prefab = ExtResource("2_btldw")
 
-[node name="Floor1" parent="." instance=ExtResource("1_kagpb")]
+[node name="Floor1" parent="Grid" instance=ExtResource("1_kagpb")]
 position = Vector2(0, -64)
 tile_prefab = ExtResource("3_1bogi")
 
-[node name="Floor2" parent="." instance=ExtResource("1_kagpb")]
+[node name="Floor2" parent="Grid" instance=ExtResource("1_kagpb")]
 position = Vector2(0, -128)
 tile_prefab = ExtResource("2_btldw")
 
-[node name="Floor3" parent="." instance=ExtResource("1_kagpb")]
+[node name="Floor3" parent="Grid" instance=ExtResource("1_kagpb")]
 position = Vector2(0, -192)
 tile_prefab = ExtResource("3_1bogi")
 
-[node name="Floor5" parent="." instance=ExtResource("1_kagpb")]
+[node name="Floor5" parent="Grid" instance=ExtResource("1_kagpb")]
 position = Vector2(0, -256)
 tile_prefab = ExtResource("2_btldw")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="MoveUp" type="Button" parent="HUD"]
+offset_left = -482.0
+offset_top = -188.0
+offset_right = -474.0
+offset_bottom = -180.0
+text = "Move Up"
+
+[node name="MoveDown" type="Button" parent="HUD"]
+offset_left = -482.0
+offset_top = -150.0
+offset_right = -382.0
+offset_bottom = -119.0
+text = "Move Down"

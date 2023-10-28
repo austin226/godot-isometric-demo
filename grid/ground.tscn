@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://canaeesa8apf4"]
 
-[ext_resource type="Script" path="res://grid/ground.gd" id="1_p1m32"]
+[ext_resource type="Script" path="res://grid/layer.gd" id="1_dfc1g"]
 [ext_resource type="Script" path="res://grid/tile.gd" id="2_alf6n"]
 [ext_resource type="PackedScene" uid="uid://ibf7k461ntik" path="res://grid/tile.tscn" id="3_x13mq"]
 [ext_resource type="Texture2D" uid="uid://fd3e3whx7vvv" path="res://sprite/floor1.png" id="4_tiqo7"]
 
 [node name="Ground" type="Node2D"]
 texture_filter = 1
-script = ExtResource("1_p1m32")
+script = ExtResource("1_dfc1g")
 width = 5
 height = 5
 

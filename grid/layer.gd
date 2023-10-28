@@ -1,5 +1,5 @@
 @tool
-class_name Ground extends Node2D
+class_name GridLayer extends Node2D
 
 @export_range(0, 20) var width: int = 1
 @export_range(0, 20) var height: int = 1
