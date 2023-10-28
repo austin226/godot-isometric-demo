@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://canaeesa8apf4"]
+
+[ext_resource type="Script" path="res://grid/ground.gd" id="1_p1m32"]
+[ext_resource type="PackedScene" uid="uid://ibf7k461ntik" path="res://grid/tile.tscn" id="2_74b0e"]
+
+[node name="Ground" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_p1m32")
+
+[node name="Tile" parent="." instance=ExtResource("2_74b0e")]
+
+[node name="Tile2" parent="." instance=ExtResource("2_74b0e")]
+z_index = -1
+position = Vector2(64, -32)
+longitude = 1
+
+[node name="Tile3" parent="." instance=ExtResource("2_74b0e")]
+z_index = -1
+position = Vector2(-64, -32)
+latitude = 1
+
+[node name="Tile4" parent="." instance=ExtResource("2_74b0e")]
+z_index = -2
+position = Vector2(0, -64)
+latitude = 1
+longitude = 1

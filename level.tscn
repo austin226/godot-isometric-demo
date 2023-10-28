@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://c2ygesbj8k11u"]
+[gd_scene load_steps=2 format=3 uid="uid://c2ygesbj8k11u"]
+
+[ext_resource type="PackedScene" uid="uid://canaeesa8apf4" path="res://grid/ground.tscn" id="1_kagpb"]
 
 [node name="Level" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Ground" parent="." instance=ExtResource("1_kagpb")]
