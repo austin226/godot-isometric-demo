@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c2ygesbj8k11u"]
 
 [ext_resource type="PackedScene" uid="uid://canaeesa8apf4" path="res://grid/ground.tscn" id="1_kagpb"]
-[ext_resource type="PackedScene" uid="uid://ibf7k461ntik" path="res://grid/tile.tscn" id="2_btldw"]
+[ext_resource type="Script" path="res://grid/grid.gd" id="1_nhihr"]
 [ext_resource type="PackedScene" uid="uid://dkq3jtv06n6ar" path="res://grid/blue_tile.tscn" id="3_1bogi"]
 
 [node name="Level" type="Node2D"]
@@ -10,25 +10,35 @@
 position = Vector2(0, -259)
 
 [node name="Grid" type="Node2D" parent="."]
+script = ExtResource("1_nhihr")
 
 [node name="Ground" parent="Grid" instance=ExtResource("1_kagpb")]
-tile_prefab = ExtResource("2_btldw")
 
 [node name="Floor1" parent="Grid" instance=ExtResource("1_kagpb")]
 position = Vector2(0, -64)
+width = 4
+height = 4
 tile_prefab = ExtResource("3_1bogi")
+layer_number = 1
 
 [node name="Floor2" parent="Grid" instance=ExtResource("1_kagpb")]
 position = Vector2(0, -128)
-tile_prefab = ExtResource("2_btldw")
+width = 3
+height = 3
+layer_number = 2
 
 [node name="Floor3" parent="Grid" instance=ExtResource("1_kagpb")]
 position = Vector2(0, -192)
+width = 2
+height = 2
 tile_prefab = ExtResource("3_1bogi")
+layer_number = 3
 
-[node name="Floor5" parent="Grid" instance=ExtResource("1_kagpb")]
+[node name="Floor4" parent="Grid" instance=ExtResource("1_kagpb")]
 position = Vector2(0, -256)
-tile_prefab = ExtResource("2_btldw")
+width = 1
+height = 1
+layer_number = 4
 
 [node name="HUD" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
