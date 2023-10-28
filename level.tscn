@@ -1,15 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2ygesbj8k11u"]
+[gd_scene load_steps=6 format=3 uid="uid://c2ygesbj8k11u"]
 
+[ext_resource type="Script" path="res://grid/layer.gd" id="1_6rlb7"]
 [ext_resource type="PackedScene" uid="uid://canaeesa8apf4" path="res://grid/ground.tscn" id="1_kagpb"]
 [ext_resource type="Script" path="res://grid/grid.gd" id="1_nhihr"]
 [ext_resource type="PackedScene" uid="uid://dkq3jtv06n6ar" path="res://grid/blue_tile.tscn" id="3_1bogi"]
+[ext_resource type="Script" path="res://ui/layer_change_button.gd" id="5_8jfym"]
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_6rlb7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -259)
 
 [node name="Grid" type="Node2D" parent="."]
+unique_name_in_owner = true
 script = ExtResource("1_nhihr")
 
 [node name="Ground" parent="Grid" instance=ExtResource("1_kagpb")]
@@ -49,6 +53,8 @@ offset_top = -188.0
 offset_right = -474.0
 offset_bottom = -180.0
 text = "Move Up"
+script = ExtResource("5_8jfym")
+layer_delta = 1
 
 [node name="MoveDown" type="Button" parent="HUD"]
 offset_left = -482.0
@@ -56,3 +62,5 @@ offset_top = -150.0
 offset_right = -382.0
 offset_bottom = -119.0
 text = "Move Down"
+script = ExtResource("5_8jfym")
+layer_delta = -1

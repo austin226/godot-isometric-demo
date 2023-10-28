@@ -15,6 +15,10 @@ run/main_scene="res://level.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+G_GameState="*res://global/game_state.gd"
+
 [dotnet]
 
 project/assembly_name="Astropolitan"
