@@ -20,10 +20,21 @@ func _ready():
 			_min_layer = min(layer.layer_number, _min_layer)
 			_max_layer = max(layer.layer_number, _max_layer)
 			print("Layer %d is at %s" % [layer.layer_number, layer.position])
+	_get_sorted_layers()
 	print("> Grid ready")
 
 func _get_focused_layer() -> int:
 	return _focused_layer
+
+func _get_sorted_layers() -> Array:
+	var result = []
+	for child in get_children():
+		if child is GridLayer:
+			result.append(child)
+	result.sort_custom(_sort_layers)
+	print(result)
+	return result
+
 
 func _on_focus_layer_changed(layer_delta: int) -> void:
 	focused_layer = clamp(focused_layer + layer_delta, _min_layer, _max_layer)
@@ -31,3 +42,6 @@ func _on_focus_layer_changed(layer_delta: int) -> void:
 func _set_focused_layer(value: int) -> void:
 	_focused_layer = value
 	print("Focused layer: %d" % value)
+
+func _sort_layers(a: GridLayer, b: GridLayer) -> bool:
+	return a.layer_number < b.layer_number
