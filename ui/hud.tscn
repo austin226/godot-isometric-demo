@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://be2pa1uscf3qa"]
+[gd_scene load_steps=3 format=3 uid="uid://be2pa1uscf3qa"]
 
 [ext_resource type="Script" path="res://ui/layer_change_button.gd" id="1_4213n"]
+[ext_resource type="Theme" uid="uid://duirqvbdd8p67" path="res://ui/theme/main_theme.tres" id="1_61188"]
 
 [node name="HUD" type="CanvasLayer"]
 follow_viewport_enabled = true
@@ -12,6 +13,7 @@ anchor_bottom = 1.0
 offset_top = -40.0
 offset_right = 40.0
 grow_vertical = 0
+theme = ExtResource("1_61188")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="LayerChangePanel"]
 layout_mode = 2
