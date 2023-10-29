@@ -12,7 +12,7 @@ const EXTRA_LAYER_GAP_DOWN: float = Coord.COORDINATE_SCALE * 7
 const EXTRA_LAYER_GAP_UP: float = Coord.COORDINATE_SCALE * 12
 const LAYER_MOVE_DURATION_S: float = 0.5
 const LAYER_MODULATE_FOCUS: Color = Color.WHITE
-const LAYER_MODULATE_NO_FOCUS: Color = Color.BLACK
+const LAYER_MODULATE_NO_FOCUS: Color = Color.DARK_GRAY
 
 
 func _ready():
