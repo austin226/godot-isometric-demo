@@ -27,12 +27,14 @@ func _fill_tiles() -> void:
 			tile.elevation = 0
 			tiles[str(tile)] = tile
 			tile.name = "(%d,%d,%d)" % [latitude, longitude, layer_number]
-			add_child(tile)
-			tile.set_owner(self)
+			%Tiles.add_child(tile)
+			tile.set_owner(%Tiles)
 
 func clear_tiles() -> void:
-	for child in get_children():
+	if %Tiles == null:
+		return
+	for child in %Tiles.get_children():
 		if child is Tile:
-			remove_child(child)
+			%Tiles.remove_child(child)
 			child.queue_free()
 	tiles = {}

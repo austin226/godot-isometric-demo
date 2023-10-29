@@ -7,5 +7,4 @@ func _ready():
 	print("> GameState ready")
 
 func change_focus_layer(layer_delta: int):
-	print(layer_delta)
 	focus_layer_changed.emit(layer_delta)

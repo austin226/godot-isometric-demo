@@ -19,27 +19,27 @@ script = ExtResource("1_nhihr")
 [node name="Ground" parent="Grid" instance=ExtResource("1_kagpb")]
 
 [node name="Floor1" parent="Grid" instance=ExtResource("1_kagpb")]
-position = Vector2(0, -288)
+position = Vector2(0, -64)
 width = 4
 height = 4
 tile_prefab = ExtResource("3_1bogi")
 layer_number = 1
 
 [node name="Floor2" parent="Grid" instance=ExtResource("1_kagpb")]
-position = Vector2(0, -352)
+position = Vector2(0, -128)
 width = 3
 height = 3
 layer_number = 2
 
 [node name="Floor3" parent="Grid" instance=ExtResource("1_kagpb")]
-position = Vector2(0, -416)
+position = Vector2(0, -192)
 width = 2
 height = 2
 tile_prefab = ExtResource("3_1bogi")
 layer_number = 3
 
 [node name="Floor4" parent="Grid" instance=ExtResource("1_kagpb")]
-position = Vector2(0, -480)
+position = Vector2(0, -256)
 width = 1
 height = 1
 layer_number = 4
