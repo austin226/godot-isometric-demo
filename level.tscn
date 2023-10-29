@@ -4,64 +4,45 @@
 [ext_resource type="PackedScene" uid="uid://canaeesa8apf4" path="res://grid/ground.tscn" id="1_kagpb"]
 [ext_resource type="Script" path="res://grid/grid.gd" id="1_nhihr"]
 [ext_resource type="PackedScene" uid="uid://dkq3jtv06n6ar" path="res://grid/blue_tile.tscn" id="3_1bogi"]
-[ext_resource type="Script" path="res://ui/layer_change_button.gd" id="5_8jfym"]
+[ext_resource type="PackedScene" uid="uid://be2pa1uscf3qa" path="res://ui/hud.tscn" id="5_7edxj"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_6rlb7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -259)
+position = Vector2(0, -237)
 
 [node name="Grid" type="Node2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(1, 0)
 script = ExtResource("1_nhihr")
 
 [node name="Ground" parent="Grid" instance=ExtResource("1_kagpb")]
 
 [node name="Floor1" parent="Grid" instance=ExtResource("1_kagpb")]
-position = Vector2(0, -448)
+position = Vector2(0, -64)
 width = 4
 height = 4
 tile_prefab = ExtResource("3_1bogi")
 layer_number = 1
 
 [node name="Floor2" parent="Grid" instance=ExtResource("1_kagpb")]
-position = Vector2(0, -512)
+position = Vector2(0, -128)
 width = 3
 height = 3
 layer_number = 2
 
 [node name="Floor3" parent="Grid" instance=ExtResource("1_kagpb")]
-position = Vector2(0, -576)
+position = Vector2(0, -192)
 width = 2
 height = 2
 tile_prefab = ExtResource("3_1bogi")
 layer_number = 3
 
 [node name="Floor4" parent="Grid" instance=ExtResource("1_kagpb")]
-position = Vector2(0, -640)
+position = Vector2(0, -256)
 width = 1
 height = 1
 layer_number = 4
 
-[node name="HUD" type="CanvasLayer" parent="."]
-follow_viewport_enabled = true
-
-[node name="MoveUp" type="Button" parent="HUD"]
-offset_left = -482.0
-offset_top = -188.0
-offset_right = -474.0
-offset_bottom = -180.0
-text = "Move Up"
-script = ExtResource("5_8jfym")
-layer_delta = 1
-
-[node name="MoveDown" type="Button" parent="HUD"]
-offset_left = -482.0
-offset_top = -150.0
-offset_right = -382.0
-offset_bottom = -119.0
-text = "Move Down"
-script = ExtResource("5_8jfym")
-layer_delta = -1
+[node name="HUD" parent="." instance=ExtResource("5_7edxj")]
+follow_viewport_enabled = false
