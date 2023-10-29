@@ -8,8 +8,8 @@ var _focused_layer: int = 0
 var _min_layer: int = 0
 var _max_layer: int = 0
 
-const EXTRA_LAYER_GAP_DOWN: float = Coord.COORDINATE_SCALE * 5
-const EXTRA_LAYER_GAP_UP: float = Coord.COORDINATE_SCALE * 7
+const EXTRA_LAYER_GAP_DOWN: float = Coord.COORDINATE_SCALE * 7
+const EXTRA_LAYER_GAP_UP: float = Coord.COORDINATE_SCALE * 12
 const LAYER_MOVE_DURATION_S: float = 0.5
 
 
