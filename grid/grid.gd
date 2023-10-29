@@ -8,8 +8,9 @@ var _focused_layer: int = 0
 var _min_layer: int = 0
 var _max_layer: int = 0
 
-const EXTRA_LAYER_GAP_DOWN = Coord.COORDINATE_SCALE * 5
-const EXTRA_LAYER_GAP_UP = Coord.COORDINATE_SCALE * 7
+const EXTRA_LAYER_GAP_DOWN: float = Coord.COORDINATE_SCALE * 5
+const EXTRA_LAYER_GAP_UP: float = Coord.COORDINATE_SCALE * 7
+const LAYER_MOVE_DURATION_S: float = 0.5
 
 
 func _ready():
@@ -42,6 +43,14 @@ func _on_focus_layer_changed(layer_delta: int) -> void:
 func _default_layer_position_y(layer_number: int) -> float:
 	return -2 * Coord.COORDINATE_SCALE * layer_number
 
+func _move_layer_to_y(layer: GridLayer, y: float) -> void:
+	if Engine.is_editor_hint():
+		# Just snap immediately
+		layer.position.y = y
+	else:
+		var tween = get_tree().create_tween()
+		tween.tween_property(layer, "position:y", y, LAYER_MOVE_DURATION_S)
+
 func _set_focused_layer(value: int) -> void:
 	_focused_layer = value
 	for layer in _get_sorted_layers():
@@ -50,8 +59,7 @@ func _set_focused_layer(value: int) -> void:
 			y += EXTRA_LAYER_GAP_DOWN
 		elif layer.layer_number > _focused_layer:
 			y -= EXTRA_LAYER_GAP_UP
-		layer.position.y = y
-
+		_move_layer_to_y(layer, y)
 	print("Focused layer: %d" % value)
 
 func _sort_layers(a: GridLayer, b: GridLayer) -> bool:

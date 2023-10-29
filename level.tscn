@@ -15,13 +15,11 @@ position = Vector2(0, -259)
 [node name="Grid" type="Node2D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_nhihr")
-focused_layer = 1
 
 [node name="Ground" parent="Grid" instance=ExtResource("1_kagpb")]
-position = Vector2(0, 160)
 
 [node name="Floor1" parent="Grid" instance=ExtResource("1_kagpb")]
-position = Vector2(0, -64)
+position = Vector2(0, -288)
 width = 4
 height = 4
 tile_prefab = ExtResource("3_1bogi")
