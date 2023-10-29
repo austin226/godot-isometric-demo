@@ -1,4 +1,4 @@
-class_name LayerChangeTextureButton extends Button
+class_name LayerChangeButton extends TextureButton
 
 ## Positive if button moves up, negative if button moves down.
 @export var layer_delta: int = 0

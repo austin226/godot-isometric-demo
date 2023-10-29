@@ -1,14 +1,8 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://duirqvbdd8p67"]
 
 [ext_resource type="Texture2D" uid="uid://cjjne11rvta0o" path="res://sprite/ui-panel-9patch.png" id="1_7wiqk"]
+[ext_resource type="StyleBox" uid="uid://dc7eqfvis65e" path="res://ui/theme/stylebox/button_style_box.tres" id="1_mx4s7"]
 [ext_resource type="FontFile" uid="uid://c42lvyi237ycl" path="res://third_party/fonts/retro_gaming/Retro Gaming.ttf" id="1_sguxe"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jqdl1"]
-content_margin_left = 2.0
-content_margin_top = 2.0
-content_margin_right = 2.0
-content_margin_bottom = 2.0
-bg_color = Color(0.223529, 0.290196, 0.313726, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pj7c1"]
 content_margin_left = 8.0
@@ -39,6 +33,13 @@ Button/colors/icon_pressed_color = Color(0, 0, 0, 1)
 Button/styles/disabled = null
 Button/styles/focus = null
 Button/styles/hover = null
-Button/styles/normal = SubResource("StyleBoxFlat_jqdl1")
+Button/styles/normal = ExtResource("1_mx4s7")
 Button/styles/pressed = null
+LayerChangeButton/base_type = &"Button"
+LayerChangeButton/colors/icon_disabled_color = Color(0.505882, 0.592157, 0.588235, 1)
+LayerChangeButton/colors/icon_focus_color = Color(0.909804, 0.756863, 0.439216, 1)
+LayerChangeButton/colors/icon_hover_color = Color(0.909804, 0.756863, 0.439216, 1)
+LayerChangeButton/colors/icon_hover_pressed_color = Color(0.909804, 0.756863, 0.439216, 1)
+LayerChangeButton/colors/icon_normal_color = Color(0.909804, 0.756863, 0.439216, 1)
+LayerChangeButton/colors/icon_pressed_color = Color(0.909804, 0.756863, 0.439216, 1)
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_pj7c1")

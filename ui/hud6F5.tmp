@@ -1,12 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://be2pa1uscf3qa"]
+[gd_scene load_steps=6 format=3 uid="uid://be2pa1uscf3qa"]
 
 [ext_resource type="Script" path="res://ui/layer_change_button.gd" id="1_4213n"]
 [ext_resource type="Theme" uid="uid://duirqvbdd8p67" path="res://ui/theme/main_theme.tres" id="1_61188"]
-[ext_resource type="Texture2D" uid="uid://bo1wemaffmoak" path="res://sprite/arrow/arrow-enabled.png" id="2_m3470"]
-[ext_resource type="Texture2D" uid="uid://bh540g5lb3vg7" path="res://sprite/arrow/arrow-pressed.png" id="3_lvbf6"]
-[ext_resource type="Texture2D" uid="uid://dgggqn835uynh" path="res://sprite/arrow/arrow-focused.png" id="4_mkysd"]
+[ext_resource type="Texture2D" uid="uid://cfmeebwtkpp4w" path="res://sprite/arrow-disabled.png" id="3_2if58"]
+[ext_resource type="Texture2D" uid="uid://bo1wemaffmoak" path="res://sprite/arrow-enabled.png" id="4_hwowj"]
 [ext_resource type="Script" path="res://ui/layer_change_texture_button.gd" id="4_pkhja"]
-[ext_resource type="Texture2D" uid="uid://cfmeebwtkpp4w" path="res://sprite/arrow/arrow-disabled.png" id="5_2knk4"]
 
 [node name="HUD" type="CanvasLayer"]
 follow_viewport_enabled = true
@@ -28,13 +26,12 @@ layout_mode = 2
 
 [node name="MoveUpIcon" type="TextureButton" parent="LayerChangePanel/VBoxContainer/MoveUp"]
 layout_mode = 2
-texture_normal = ExtResource("2_m3470")
-texture_pressed = ExtResource("3_lvbf6")
-texture_hover = ExtResource("4_mkysd")
-texture_disabled = ExtResource("5_2knk4")
-texture_focused = ExtResource("4_mkysd")
+texture_normal = ExtResource("4_hwowj")
+texture_pressed = ExtResource("4_hwowj")
+texture_hover = ExtResource("4_hwowj")
+texture_disabled = ExtResource("3_2if58")
+texture_focused = ExtResource("4_hwowj")
 script = ExtResource("4_pkhja")
-layer_delta = 1
 
 [node name="MoveUpText" type="Button" parent="LayerChangePanel/VBoxContainer/MoveUp"]
 texture_filter = 3
@@ -49,14 +46,13 @@ layout_mode = 2
 
 [node name="MoveDownIcon" type="TextureButton" parent="LayerChangePanel/VBoxContainer/MoveDown"]
 layout_mode = 2
-texture_normal = ExtResource("2_m3470")
-texture_pressed = ExtResource("3_lvbf6")
-texture_hover = ExtResource("4_mkysd")
-texture_disabled = ExtResource("5_2knk4")
-texture_focused = ExtResource("4_mkysd")
+texture_normal = ExtResource("4_hwowj")
+texture_pressed = ExtResource("4_hwowj")
+texture_hover = ExtResource("4_hwowj")
+texture_disabled = ExtResource("3_2if58")
+texture_focused = ExtResource("4_hwowj")
 flip_v = true
 script = ExtResource("4_pkhja")
-layer_delta = -1
 
 [node name="MoveDownText" type="Button" parent="LayerChangePanel/VBoxContainer/MoveDown"]
 texture_filter = 3

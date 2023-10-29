@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvoobyq51fbse"
-path="res://.godot/imported/arrow-down-inactive.png-7ca25058edd3c6e42f620bf056fd4c44.ctex"
+uid="uid://dgggqn835uynh"
+path="res://.godot/imported/arrow-focused.png-8c36169387635fb8c16a8d0a4028bbba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/arrow-down-inactive.png"
-dest_files=["res://.godot/imported/arrow-down-inactive.png-7ca25058edd3c6e42f620bf056fd4c44.ctex"]
+source_file="res://sprite/arrow/arrow-focused.png"
+dest_files=["res://.godot/imported/arrow-focused.png-8c36169387635fb8c16a8d0a4028bbba.ctex"]
 
 [params]
 
